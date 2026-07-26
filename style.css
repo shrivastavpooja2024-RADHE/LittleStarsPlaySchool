@@ -1,0 +1,732 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fbff;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+    width:100%;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo h2{
+    color:#2e7d32;
+    font-size:24px;
+}
+
+.logo p{
+    color:#666;
+    font-size:14px;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#2e7d32;
+}
+
+.admission-btn{
+    background:#ff9800;
+    color:#fff !important;
+    padding:12px 22px;
+    border-radius:30px;
+}
+
+.admission-btn:hover{
+    background:#ff5722;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    height:90vh;
+    background:url("images/hero.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:700px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#ff5722;
+    transform:translateY(-3px);
+}
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    padding:80px 8%;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:40px;
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+    padding:80px 8%;
+    background:#f4f9ff;
+    text-align:center;
+}
+
+.why-us h2{
+    font-size:38px;
+    color:#2e7d32;
+    margin-bottom:40px;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.why-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+}
+
+.why-card i{
+    font-size:45px;
+    color:#ff9800;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   ACTIVITIES
+=========================== */
+
+.activities{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.activities h2{
+    font-size:38px;
+    color:#2e7d32;
+    margin-bottom:40px;
+}
+
+.activity-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.activity-card{
+    background:#ffffff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    font-size:22px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.activity-card:hover{
+    background:#ff9800;
+    color:white;
+    transform:scale(1.05);
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+    padding:80px 8%;
+    background:#f8fbff;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:38px;
+    color:#2e7d32;
+    margin-bottom:40px;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-container img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+}
+/* ===========================
+   TEACHERS SECTION
+=========================== */
+
+.teachers{
+    padding:80px 8%;
+    text-align:center;
+    background:#ffffff;
+}
+
+.teachers h2{
+    font-size:38px;
+    color:#2e7d32;
+    margin-bottom:40px;
+}
+
+.teacher-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.teacher-card{
+    background:#f8fbff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.teacher-card:hover{
+    transform:translateY(-10px);
+}
+
+.teacher-card img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   ADMISSION SECTION
+=========================== */
+
+.admission{
+    padding:80px 8%;
+    background:#f4f9ff;
+    text-align:center;
+}
+
+.admission h2{
+    color:#2e7d32;
+    margin-bottom:30px;
+}
+
+.admission-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.admission-form input,
+.admission-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.admission-form textarea{
+    height:120px;
+}
+
+.admission-form button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.admission-form button:hover{
+    background:#ff5722;
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+
+.testimonials{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.testimonial-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.testimonial-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+    padding:80px 8%;
+    background:#f4f9ff;
+}
+
+.contact h2{
+    text-align:center;
+    color:#2e7d32;
+    margin-bottom:40px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.contact-form button{
+    background:#2e7d32;
+    color:white;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===========================
+   WHATSAPP BUTTON
+=========================== */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:768px){
+
+.header{
+    flex-direction:column;
+}
+
+.navbar{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.about,
+.contact-container{
+    grid-template-columns:1fr;
+    display:grid;
+}
+
+.why-container,
+.activity-container,
+.gallery-container,
+.teacher-container,
+.testimonial-container{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+/* ===========================
+   HERO IMAGE SLIDER
+=========================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:90vh;
+    overflow:hidden;
+}
+
+.slider{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    background:#ff5722;
+}
+/* ===========================
+   HAMBURGER MENU
+=========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#2e7d32;
+}
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .navbar{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        background:#ffffff;
+        padding:20px 0;
+        box-shadow:0 5px 10px rgba(0,0,0,.1);
+    }
+
+    .navbar.active{
+        display:flex;
+    }
+
+    .navbar a{
+        padding:12px;
+        text-align:center;
+    }
+
+}
+/* ===========================
+   SCROLL ANIMATION
+=========================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+/* ===========================
+   GALLERY LIGHTBOX
+=========================== */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:80%;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:#fff;
+    font-size:45px;
+    cursor:pointer;
+}
+/* THANK YOU PAGE */
+
+.thankyou-container{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+color:#fff;
+
+padding:20px;
+
+}
+
+.thankyou-container h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.thankyou-container h2{
+
+margin-bottom:20px;
+
+}
+
+.thankyou-container p{
+
+font-size:20px;
+
+margin:10px;
+
+}
+
+.thankyou-container .hero-btn{
+
+margin-top:30px;
+
+}
