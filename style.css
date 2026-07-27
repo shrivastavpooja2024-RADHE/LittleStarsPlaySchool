@@ -730,3 +730,418 @@ margin:10px;
 margin-top:30px;
 
 }
+html{
+    scroll-behavior:smooth;
+}
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    box-shadow:0 2px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.navbar a{
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#ff6b6b;
+}
+
+.hero-btn{
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+.gallery img{
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.teacher-card{
+    transition:0.4s;
+}
+
+.teacher-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+.why-card,
+.activity-card,
+.teacher-card,
+.testimonial-card,
+.facility-card{
+
+    transition:.4s ease;
+
+}
+
+.why-card:hover,
+.activity-card:hover,
+.teacher-card:hover,
+.testimonial-card:hover,
+.facility-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+button,
+.hero-btn,
+.admission-btn{
+
+    transition:.4s;
+
+}
+
+button:hover,
+.hero-btn:hover,
+.admission-btn:hover{
+
+    letter-spacing:1px;
+
+    border-radius:50px;
+
+}
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:992px){
+
+.header{
+
+    padding:15px 5%;
+
+}
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+.about{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.about img{
+
+    width:100%;
+
+}
+
+.why-container,
+.activity-container,
+.teacher-container,
+.gallery-container,
+.facility-container,
+.testimonial-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.navbar{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    display:none;
+
+    flex-direction:column;
+
+    padding:20px;
+
+}
+
+.navbar.active{
+
+    display:flex;
+
+}
+
+.hero-content h1{
+
+    font-size:32px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+}
+
+.why-container,
+.activity-container,
+.teacher-container,
+.gallery-container,
+.facility-container,
+.testimonial-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.admission-form{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-content h1{
+
+    font-size:26px;
+
+}
+
+.hero-btn{
+
+    padding:12px 24px;
+
+}
+
+}
+/* ===========================
+   PREMIUM GRADIENT DESIGN
+=========================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#ffecd2,#fcb69f);
+
+}
+
+.hero-content h1{
+
+    color:#2c3e50;
+
+}
+
+.hero-content p{
+
+    color:#555;
+
+}
+
+.hero-btn{
+
+    background:linear-gradient(45deg,#ff6b6b,#ff9f43);
+
+    color:#fff;
+
+    border:none;
+
+}
+
+.hero-btn:hover{
+
+    background:linear-gradient(45deg,#ff9f43,#ff6b6b);
+
+}
+body{
+
+    animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+/* ===========================
+   STATISTICS
+=========================== */
+
+.stats{
+
+    padding:80px 8%;
+
+    background:#4facfe;
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+}
+
+.stats-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+
+}
+
+.stat-card h2{
+
+    font-size:40px;
+
+    color:#ff6b6b;
+
+}
+
+.stat-card p{
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+@media(max-width:768px){
+
+.stats-container{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.stats-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+const counters=document.querySelectorAll(".stat-card h2");
+
+counters.forEach(counter=>{
+
+const target=counter.innerText.replace("+","").replace("%","");
+
+let count=0;
+
+const updateCounter=()=>{
+
+const increment=target/100;
+
+if(count<target){
+
+count+=increment;
+
+counter.innerText=Math.ceil(count)+(counter.innerText.includes("%")?"%":"+");
+
+setTimeout(updateCounter,20);
+
+}else{
+
+counter.innerText=counter.innerText.includes("%")?"100%":target+"+";
+
+}
+
+};
+
+updateCounter();
+
+});
+/* ===========================
+   DARK MODE
+=========================== */
+
+#theme-btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    background:#2e7d32;
+    color:#fff;
+    transition:.3s;
+}
+
+#theme-btn:hover{
+    transform:scale(1.05);
+}
+
+.dark-mode{
+    background:#1b1b1b;
+    color:white;
+}
+
+.dark-mode section{
+    background:#1b1b1b;
+    color:white;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p{
+    color:white;
+}

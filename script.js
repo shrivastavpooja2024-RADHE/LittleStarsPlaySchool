@@ -213,3 +213,66 @@ hiddenElements.forEach((el)=>{
     observer.observe(el);
 
 });
+window.addEventListener("scroll",()=>{
+
+    const header=document.querySelector(".header");
+
+    if(window.scrollY>50){
+
+        header.style.padding="10px 0";
+
+    }else{
+
+        header.style.padding="18px 0";
+
+    }
+
+});
+// =============================
+// ANIMATED STATISTICS
+// =============================
+
+const counters = document.querySelectorAll(".stat-card h2");
+
+counters.forEach(counter => {
+
+    const original = counter.textContent;
+    const target = parseInt(original);
+
+    let count = 0;
+
+    const timer = setInterval(() => {
+
+        count++;
+
+        if (original.includes("%")) {
+            counter.textContent = count + "%";
+        } else {
+            counter.textContent = count + "+";
+        }
+
+        if (count >= target) {
+            clearInterval(timer);
+            counter.textContent = original;
+        }
+
+    }, 20);
+
+});
+// =============================
+// DARK MODE
+// =============================
+
+const themeBtn = document.getElementById("theme-btn");
+
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        themeBtn.innerHTML="☀️";
+    }else{
+        themeBtn.innerHTML="🌙";
+    }
+
+});
